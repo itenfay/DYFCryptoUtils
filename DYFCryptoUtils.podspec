@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
-  spec.source       = { :git => "https://github.com/dgynfi/DYFCryptoUtils.git", :tag => s.version.to_s }
+  spec.source       = { :git => "https://github.com/dgynfi/DYFCryptoUtils.git", :tag => spec.version.to_s }
 
   spec.source_files  = "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
