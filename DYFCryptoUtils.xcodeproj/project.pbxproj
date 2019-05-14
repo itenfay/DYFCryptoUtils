@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		148073B72289D4D60090387D /* DYFCryptoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 148073B62289D4D60090387D /* DYFCryptoUtils.m */; };
 		1490EFA5227F894E001698ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1490EFA4227F894E001698ED /* AppDelegate.m */; };
 		1490EFA8227F894E001698ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1490EFA7227F894E001698ED /* ViewController.m */; };
 		1490EFAB227F894F001698ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1490EFA9227F894F001698ED /* Main.storyboard */; };
 		1490EFAD227F895A001698ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1490EFAC227F895A001698ED /* Assets.xcassets */; };
 		1490EFB0227F895A001698ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1490EFAE227F895A001698ED /* LaunchScreen.storyboard */; };
 		1490EFB3227F895A001698ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1490EFB2227F895A001698ED /* main.m */; };
-		1490EFBB227F89D6001698ED /* DYFCryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1490EFB9227F89D5001698ED /* DYFCryptoUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1490EFA0227F894E001698ED /* CryptoUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		148073B52289D4D60090387D /* DYFCryptoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFCryptoUtils.h; sourceTree = "<group>"; };
+		148073B62289D4D60090387D /* DYFCryptoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFCryptoUtils.m; sourceTree = "<group>"; };
+		1490EFA0227F894E001698ED /* DYFCryptoUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYFCryptoUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1490EFA3227F894E001698ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1490EFA4227F894E001698ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1490EFA6227F894E001698ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -27,8 +29,6 @@
 		1490EFAF227F895A001698ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1490EFB1227F895A001698ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1490EFB2227F895A001698ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1490EFB9227F89D5001698ED /* DYFCryptoUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFCryptoUtil.m; sourceTree = "<group>"; };
-		1490EFBA227F89D5001698ED /* DYFCryptoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFCryptoUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,10 +42,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		148073B42289D4D50090387D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				148073B52289D4D60090387D /* DYFCryptoUtils.h */,
+				148073B62289D4D60090387D /* DYFCryptoUtils.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		1490EF97227F894E001698ED = {
 			isa = PBXGroup;
 			children = (
-				1490EFA2227F894E001698ED /* CryptoUtil */,
+				148073B42289D4D50090387D /* Classes */,
+				1490EFA2227F894E001698ED /* Basic Files */,
 				1490EFA1227F894E001698ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,16 +63,14 @@
 		1490EFA1227F894E001698ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1490EFA0227F894E001698ED /* CryptoUtil.app */,
+				1490EFA0227F894E001698ED /* DYFCryptoUtils.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1490EFA2227F894E001698ED /* CryptoUtil */ = {
+		1490EFA2227F894E001698ED /* Basic Files */ = {
 			isa = PBXGroup;
 			children = (
-				1490EFBA227F89D5001698ED /* DYFCryptoUtil.h */,
-				1490EFB9227F89D5001698ED /* DYFCryptoUtil.m */,
 				1490EFA3227F894E001698ED /* AppDelegate.h */,
 				1490EFA4227F894E001698ED /* AppDelegate.m */,
 				1490EFA6227F894E001698ED /* ViewController.h */,
@@ -73,15 +81,15 @@
 				1490EFB1227F895A001698ED /* Info.plist */,
 				1490EFB2227F895A001698ED /* main.m */,
 			);
-			path = CryptoUtil;
+			path = "Basic Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1490EF9F227F894E001698ED /* CryptoUtil */ = {
+		1490EF9F227F894E001698ED /* DYFCryptoUtils */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1490EFB6227F895A001698ED /* Build configuration list for PBXNativeTarget "CryptoUtil" */;
+			buildConfigurationList = 1490EFB6227F895A001698ED /* Build configuration list for PBXNativeTarget "DYFCryptoUtils" */;
 			buildPhases = (
 				1490EF9C227F894E001698ED /* Sources */,
 				1490EF9D227F894E001698ED /* Frameworks */,
@@ -91,9 +99,9 @@
 			);
 			dependencies = (
 			);
-			name = CryptoUtil;
+			name = DYFCryptoUtils;
 			productName = CryptoUtil;
-			productReference = 1490EFA0227F894E001698ED /* CryptoUtil.app */;
+			productReference = 1490EFA0227F894E001698ED /* DYFCryptoUtils.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1490EF9B227F894E001698ED /* Build configuration list for PBXProject "CryptoUtil" */;
+			buildConfigurationList = 1490EF9B227F894E001698ED /* Build configuration list for PBXProject "DYFCryptoUtils" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +131,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1490EF9F227F894E001698ED /* CryptoUtil */,
+				1490EF9F227F894E001698ED /* DYFCryptoUtils */,
 			);
 		};
 /* End PBXProject section */
@@ -146,8 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				148073B72289D4D60090387D /* DYFCryptoUtils.m in Sources */,
 				1490EFA8227F894E001698ED /* ViewController.m in Sources */,
-				1490EFBB227F89D6001698ED /* DYFCryptoUtil.m in Sources */,
 				1490EFB3227F895A001698ED /* main.m in Sources */,
 				1490EFA5227F894E001698ED /* AppDelegate.m in Sources */,
 			);
@@ -293,13 +301,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = CryptoUtil/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = "$(SRCROOT)/Basic Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dyf.CryptoUtil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asd.cryptoutils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,13 +320,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = CryptoUtil/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = "$(SRCROOT)/Basic Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dyf.CryptoUtil;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asd.cryptoutils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,7 +336,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1490EF9B227F894E001698ED /* Build configuration list for PBXProject "CryptoUtil" */ = {
+		1490EF9B227F894E001698ED /* Build configuration list for PBXProject "DYFCryptoUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1490EFB4227F895A001698ED /* Debug */,
@@ -337,7 +345,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1490EFB6227F895A001698ED /* Build configuration list for PBXNativeTarget "CryptoUtil" */ = {
+		1490EFB6227F895A001698ED /* Build configuration list for PBXNativeTarget "DYFCryptoUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1490EFB7227F895A001698ED /* Debug */,

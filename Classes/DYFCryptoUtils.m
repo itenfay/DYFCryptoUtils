@@ -1,15 +1,33 @@
 //
-//  DYFCryptoUtil.m
+//  DYFCryptoUtils.m
 //
 //  Created by dyf on 2017/10/10.
 //  Copyright © 2017年 dyf. All rights reserved.
 //
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+//
 
-#import "DYFCryptoUtil.h"
+#import "DYFCryptoUtils.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 
-@implementation DYFCryptoUtil
+@implementation DYFCryptoUtils
 
 + (NSString *)base64EncodedStringWithString:(NSString *)string {
     NSData *plainData = [string dataUsingEncoding:NSUTF8StringEncoding];
@@ -62,10 +80,13 @@
     return nil;
 }
 
-+ (NSString *)MD5Bit16EncodedStringWithString:(NSString *)string {
-    NSString *hash = [self MD5EncodedStringWithString:string];
-    if (hash.length > 0) {
-        return [hash substringWithRange:NSMakeRange(8, 16)];
++ (NSString *)MD5EncodedStringFor16BitWithString:(NSString *)string {
+    NSString *hashValue = [self MD5EncodedStringWithString:string];
+    if (hashValue && hashValue.length > 0) {
+        NSUInteger fromIndex = 8;
+        NSUInteger toIndex = 24;
+        NSUInteger len = toIndex - fromIndex;
+        return [hashValue substringWithRange:NSMakeRange(fromIndex, len)];
     }
     return nil;
 }
@@ -110,20 +131,28 @@
     return outputData;
 }
 
-+ (NSString *)DESEncrypt:(NSString *)string withKey:(NSString *)key {
++ (NSString *)DESEncrypt:(NSString *)string key:(NSString *)key {
+    return [self DESEncrypt:string key:key iv:nil];
+}
+
++ (NSString *)DESEncrypt:(NSString *)string key:(NSString *)key iv:(NSString *)iv {
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     NSData *encryptedData = [self dataUsingDESWithData:data
                                                    key:key
-                                                    iv:nil
+                                                    iv:iv
                                              operation:kCCEncrypt];
     return [self base64EncodedStringWithData:encryptedData];
 }
 
-+ (NSString *)DESDecrypt:(NSString *)string withKey:(NSString *)key {
++ (NSString *)DESDecrypt:(NSString *)string key:(NSString *)key {
+    return [self DESDecrypt:string key:key iv:nil];
+}
+
++ (NSString *)DESDecrypt:(NSString *)string key:(NSString *)key iv:(NSString *)iv {
     NSData *encryptedData = [self base64DecodedDataWithString:string];
     NSData *decryptedData = [self dataUsingDESWithData:encryptedData
                                                    key:key
-                                                    iv:nil
+                                                    iv:iv
                                              operation:kCCDecrypt];
     return [[NSString alloc] initWithData:decryptedData encoding:NSUTF8StringEncoding];
 }
@@ -170,20 +199,28 @@
 
 #pragma mark - AES Public Methods
 
-+ (NSString *)AESEncrypt:(NSString *)string withKey:(NSString *)key {
++ (NSString *)AESEncrypt:(NSString *)string key:(NSString *)key {
+    return [self AESEncrypt:string key:key iv:nil];
+}
+
++ (NSString *)AESEncrypt:(NSString *)string key:(NSString *)key iv:(NSString *)iv {
     NSData *plainData = [string dataUsingEncoding:NSUTF8StringEncoding];
     NSData *encryptedData = [self dataUsingAESWithData:plainData
                                                    key:key
-                                                    iv:nil
+                                                    iv:iv
                                              operation:kCCEncrypt];
     return [self base64EncodedStringWithData:encryptedData];
 }
 
-+ (NSString *)AESDecrypt:(NSString *)string withKey:(NSString *)key {
++ (NSString *)AESDecrypt:(NSString *)string key:(NSString *)key {
+    return [self AESDecrypt:string key:key iv:nil];
+}
+
++ (NSString *)AESDecrypt:(NSString *)string key:(NSString *)key iv:(NSString *)iv {
     NSData *encryptedData = [self base64DecodedDataWithString:string];
     NSData *decryptedData = [self dataUsingAESWithData:encryptedData
                                                    key:key
-                                                    iv:nil
+                                                    iv:iv
                                              operation:kCCDecrypt];
     return [[NSString alloc] initWithData:decryptedData encoding:NSUTF8StringEncoding];
 }
