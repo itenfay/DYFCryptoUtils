@@ -4,7 +4,7 @@
  # 安装
  支持通过 CocoaPods 安装。
  ```pod
- pod 'DYFCryptoUtils', '~> 1.0.0'
+ pod 'DYFCryptoUtils', '~> 1.0.1'
 ```
 
 # 使用说明
