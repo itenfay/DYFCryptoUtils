@@ -1,3 +1,8 @@
+# 技术交流群
+
+欢迎加入技术交流群(群号:155353383) ，一起探讨技术问题。<br>
+![群号:155353383](https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/qq155353383.jpg)
+
 # DYFCryptoUtils
  iOS crypto，includes Base64, MD5, DES, AES, RSA.
  
@@ -78,7 +83,3 @@ static NSString *rsaPrivKey = @"MIICXAIBAAKBgQCmPW2SwJFldGVB1SM82VYvSZYRF1H5DREU
     NSLog(@"[RSA] Signature verificaiton %@", re ? @"succeeded" : @"failed");
 }
 ```
-
-7. QQ群交流 <br>
-QQ群：155353383 <br>
-![qq群：155353383](https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/qq155353383.jpg)
