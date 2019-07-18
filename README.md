@@ -1,18 +1,34 @@
-# 技术交流群
+[如果你觉得能帮助到你，请给一颗小星星。谢谢！(If you think it can help you, please give it a star. Thanks!)](https://github.com/dgynfi/DYFCryptoUtils)
 
-欢迎加入技术交流群(群号:155353383) ，一起探讨技术问题。<br>
-![群号:155353383](https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/qq155353383.jpg)
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)&nbsp;
+[![CocoaPods](http://img.shields.io/cocoapods/v/DYFCryptoUtils.svg?style=flat)](http://cocoapods.org/pods/DYFCryptoUtils)&nbsp;
+![CocoaPods](http://img.shields.io/cocoapods/p/DYFCryptoUtils.svg?style=flat)&nbsp;
+[![Build Status](https://travis-ci.org/dgynfi/DYFCryptoUtils.svg?branch=master)](https://travis-ci.org/dgynfi/DYFCryptoUtils)
 
-# DYFCryptoUtils
- iOS crypto，includes Base64, MD5, DES, AES, RSA.
- 
- # 安装
- 支持通过 CocoaPods 安装。
- ```pod
- pod 'DYFCryptoUtils', '~> 1.0.1'
+## 技术交流群(群号:155353383) 
+
+欢迎加入技术交流群，一起探讨技术问题。<br />
+![](https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/qq155353383.jpg)
+
+## DYFCryptoUtils
+
+一行代码实现 iOS Base64, 32/16位MD5, DES, AES, RSA算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code. The operation is simple and easy to use.)
+
+ ## 安装
+
+- 支持通过 CocoaPods 安装。
+ ```pod install
+ pod 'DYFCryptoUtils', '~> 1.0.2'
 ```
 
-# 使用说明
+## 预览
+
+<div align=left>
+<img src="https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/CryptoUtilsPreview.gif" width="40%" />
+</div>
+
+## 使用说明
+
 1. 原文
 ```ObjC
 #define PlainText @"Objective-C，通常写作ObjC或OC和较少用的Objective C或Obj-C，是扩充C的面向对象编程语言。它主要使用于Mac OS X和GNUstep这两个使用OpenStep标准的系统，而在NeXTSTEP和OpenStep中它更是基本语言。GCC与Clang含Objective-C的编译器，Objective-C可以在GCC以及Clang运作的系统上编译。Swift是苹果于2014年WWDC（苹果开发者大会）发布的一种新的编程语言，用于编写 iOS 和 macOS 应用。Swift 结合了 C 和 Objective-C 的优点并且不受C兼容性的限制。Swift 采用安全的编程模式并添加了很多新特性，这将使编程更简单，更灵活，也更有趣。Swift 是基于成熟而且倍受喜爱的 Cocoa 和 Cocoa Touch 框架，他的降临将重新定义软件开发。"
@@ -20,66 +36,84 @@
 
 2. Base64
 ```ObjC
-- (void)testBase64 {
-    NSString *encodedText = [DYFCryptoUtils base64EncodedStringWithString:PlainText];
+- (IBAction)testBase64:(id)sender {
+    NSString *encodedText = [DYFCryptoUtils base64EncodedString:PlainText];
     NSLog(@"[Base64] Encoded text: %@", encodedText);
-    NSString *decodedText = [DYFCryptoUtils base64DecodedStringWithString:encodedText];
+
+    NSString *decodedText = [DYFCryptoUtils base64DecodedString:encodedText];
     NSLog(@"[Base64] Decoded text: %@", decodedText);
+
+    NSData *encodedData = [DYFCryptoUtils base64EncodedDataWithString:PlainText];
+    NSLog(@"[Base64] Encoded data: %@", encodedData);
+
+    NSData *decodeData = [DYFCryptoUtils base64DecodedData:encodedData];
+    NSLog(@"[Base64] Decoded data: %@", decodeData);
 }
 ```
 
 3. MD5
 ```ObjC
-- (void)testMD5 {
-    NSString *hash = [DYFCryptoUtils MD5EncodedStringWithString:PlainText];
+- (IBAction)testMD5:(id)sender {
+    NSString *hash = [DYFCryptoUtils MD5EncodedString:PlainText];
     NSLog(@"[MD5] Hash: %@", hash);
-    NSString *hash16Bit = [DYFCryptoUtils MD5EncodedStringFor16BitWithString:PlainText];
-    NSLog(@"[MD5] 16 bit hash: %@", hash16Bit);
+
+    NSString *bit16Hash = [DYFCryptoUtils bit16MD5EncodedString:PlainText];
+    NSLog(@"[MD5] 16 Bit Hash: %@", bit16Hash);
 }
 ```
 
 4. DES
 ```ObjC
-- (void)testDES {
+- (IBAction)testDES:(id)sender {
     NSString *key = @"aT59qMrbqJh3o7F566GpO6BhKgdrHDUsMfIPs27J5CmE6DXGkl9VFYam4gRI5MFVjFTi9oScQALesTaPuQ8hdAH9jEssJnItgYxE6Pl+D8sFTVZJvhMwNQR";
-    // iv为nil.
-    NSString *encryptedText = [DYFCryptoUtils DESEncrypt:PlainText key:key];
+
+    NSString *encryptedText = [DYFCryptoUtils DESEncrypt:PlainText key:key]; // iv is nil.
     NSLog(@"[DES] Encrypted text: %@", encryptedText);
-    NSString *decryptedText = [DYFCryptoUtils DESDecrypt:encryptedText key:key];
+
+    NSString *decryptedText = [DYFCryptoUtils DESDecrypt:encryptedText key:key]; // iv is nil.
     NSLog(@"[DES] Decrypted text: %@", decryptedText);
 }
 ```
 
 5. AES
 ```ObjC
-- (void)testAES {
+- (IBAction)testAES:(id)sender {
     NSString *key = @"aT59qMrbqJh3o7F566GpO6BhKgdrHDUsMfIPs27J5CmE6DXGkl9VFYam4gRI5MFVjFTi9oScQALesTaPuQ8hdAH9jEssJnItgYxE6Pl+D8sFTVZJvhMwNQR";
-    // iv为nil.
-    NSString *encryptedText = [DYFCryptoUtils AESEncrypt:PlainText key:key];
+
+    NSString *encryptedText = [DYFCryptoUtils AESEncrypt:PlainText key:key]; // iv is nil.
     NSLog(@"[AES] Encrypted text: %@", encryptedText);
-    NSString *decryptedText = [DYFCryptoUtils AESDecrypt:encryptedText key:key];
+
+    NSString *decryptedText = [DYFCryptoUtils AESDecrypt:encryptedText key:key]; // iv is nil.
     NSLog(@"[AES] Decrypted text: %@", decryptedText);
 }
 ```
 
 6. RSA
+
+- KeyPair: Public Key/Private Key.
+
 ```ObjC
 // RSA公钥
 static NSString *rsaPubKey = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCmPW2SwJFldGVB1SM82VYvSZYRF1H5DREUiDK2SLnksxHAV/roC1uB44a4siUehJ9AKeV/g58pVrjhX3eSiBh9Khom/S2hEWF2n/6+lqqiwQi1W5rjl86v+dI2F6NgbPFpfesrRjWD9uskT2VX/ZJuMRLz8VPIyQOM9TW3PkMYBQIDAQAB";
-// RSA私钥
-static NSString *rsaPrivKey = @"MIICXAIBAAKBgQCmPW2SwJFldGVB1SM82VYvSZYRF1H5DREUiDK2SLnksxHAV/roC1uB44a4siUehJ9AKeV/g58pVrjhX3eSiBh9Khom/S2hEWF2n/6+lqqiwQi1W5rjl86v+dI2F6NgbPFpfesrRjWD9uskT2VX/ZJuMRLz8VPIyQOM9TW3PkMYBQIDAQABAoGAK2VVuT1ztxxPYoQVEslZaja3afbAe1ch4k47jsIlZMIqHB/ba7+rP5j5jjVS40iTmdhWBJeDcPMmiA631BSa74XW4RyZ8JDtu1qOYxH5tqhgsIEDbVAAqCB+t+y13z/Nb+SO3mbRGu5HzvAMaad3M7ztR3SAJTiPK1OI293wdXECQQDS4Hx3fwg66NYLb061Hk8P5arClUnBoh5/qZk/kx3nen7SdjACVXC/9B/PnxTeZkcqQi+y0MjzuPHU5n2PT26HAkEAyc/MWRqtgTQHd4EqzYt6vvkhMo0T8w36/ABiQSRfKrbJXEmK1Qf44z8f6jTZTMTqF56aMwaI81Uzt1IqzCf8EwJBAM2/d9GDoT0RBh58CJhQrSU+mWBnFmKV0hoPGNXdrZS3gNvJssfkIzE2eH8zoMHpms/RagaXDSo3LcTi6mkUQCsCQFz2cM524IfM3Meq43mtj4xbHHS50f+7Z+sfjiMtyvzVGGp/oglB099yW5Q6ZgLcDm107NkmYH2euOTwX7CNlqsCQBicZxvPsIgp8zdAiGbxverXzmZs9JZDODUhw8HQkm2oCZWXHDraHaZ9NA88vpdLfqBXtF5t0QNFpD80F/7HjtE=";
+
+// RSA私钥(pkcs8)
+static NSString *rsaPrivKey = @"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKY9bZLAkWV0ZUHVIzzZVi9JlhEXUfkNERSIMrZIueSzEcBX+ugLW4HjhriyJR6En0Ap5X+DnylWuOFfd5KIGH0qGib9LaERYXaf/r6WqqLBCLVbmuOXzq/50jYXo2Bs8Wl96ytGNYP26yRPZVf9km4xEvPxU8jJA4z1Nbc+QxgFAgMBAAECgYArZVW5PXO3HE9ihBUSyVlqNrdp9sB7VyHiTjuOwiVkwiocH9trv6s/mPmONVLjSJOZ2FYEl4Nw8yaIDrfUFJrvhdbhHJnwkO27Wo5jEfm2qGCwgQNtUACoIH637LXfP81v5I7eZtEa7kfO8Axpp3czvO1HdIAlOI8rU4jb3fB1cQJBANLgfHd/CDro1gtvTrUeTw/lqsKVScGiHn+pmT+THed6ftJ2MAJVcL/0H8+fFN5mRypCL7LQyPO48dTmfY9PbocCQQDJz8xZGq2BNAd3gSrNi3q++SEyjRPzDfr8AGJBJF8qtslcSYrVB/jjPx/qNNlMxOoXnpozBojzVTO3UirMJ/wTAkEAzb930YOhPREGHnwImFCtJT6ZYGcWYpXSGg8Y1d2tlLeA28myx+QjMTZ4fzOgwemaz9FqBpcNKjctxOLqaRRAKwJAXPZwznbgh8zcx6rjea2PjFscdLnR/7tn6x+OIy3K/NUYan+iCUHT33JblDpmAtwObXTs2SZgfZ645PBfsI2WqwJAGJxnG8+wiCnzN0CIZvG96tfOZmz0lkM4NSHDwdCSbagJlZccOtodpn00Dzy+l0t+oFe0Xm3RA0WkPzQX/seO0Q==";
 ```
 
+- Encrypt/Decrypt/Sign/Verify
+
 ```ObjC
-- (void)testRSA {
+- (IBAction)testRSA:(id)sender {
     NSString *encryptedText = [DYFCryptoUtils RSAEncrypt:PlainText publicKey:rsaPubKey];
     NSLog(@"[RSA] Encrypted text: %@", encryptedText);
+
     NSString *decryptedText = [DYFCryptoUtils RSADecrypt:encryptedText privateKey:rsaPrivKey];
     NSLog(@"[RSA] Decrypted text: %@", decryptedText);
 
     NSString *signature = [DYFCryptoUtils RSASign:PlainText privateKey:rsaPrivKey];
     NSLog(@"[RSA] Signature: %@", signature);
+
     BOOL re = [DYFCryptoUtils RSAVerify:PlainText signature:signature publicKey:rsaPubKey];
-    NSLog(@"[RSA] Signature verificaiton %@", re ? @"succeeded" : @"failed");
+    NSLog(@"[RSA] Signature verificaiton: %@", re ? @"Success" : @"Failure");
 }
 ```
