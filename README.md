@@ -7,20 +7,23 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)&nbsp;
 [![CocoaPods](http://img.shields.io/cocoapods/v/DYFCryptoUtils.svg?style=flat)](http://cocoapods.org/pods/DYFCryptoUtils)&nbsp;
 ![CocoaPods](http://img.shields.io/cocoapods/p/DYFCryptoUtils.svg?style=flat)&nbsp;
-[![Build Status](https://travis-ci.org/dgynfi/DYFCryptoUtils.svg?branch=master)](https://travis-ci.org/dgynfi/DYFCryptoUtils)
 
 ## 技术交流群(群号:155353383) 
 
-欢迎加入技术交流群，一起探讨技术问题。<br />
-![](https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/qq155353383.jpg)
+- 欢迎加入技术交流群，一起探讨技术问题。
+
+<div align=left>
+&emsp; <img src="https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/qq155353383.jpg" width="20%" />
+</div>
 
 ## DYFCryptoUtils
 
-一行代码实现 iOS Base64, 32/16位MD5, DES, AES, RSA算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code. The operation is simple and easy to use.)
+&emsp; 一行代码实现 iOS Base64, 32/16位 MD5, DES, AES, RSA 算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code. The operation is simple and easy to use.)
 
  ## 安装
 
 - 支持通过 CocoaPods 安装。
+
  ```pod install
  pod 'DYFCryptoUtils', '~> 1.0.2'
 ```
@@ -28,17 +31,19 @@
 ## 预览
 
 <div align=left>
-<img src="https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/CryptoUtilsPreview.gif" width="40%" />
+&emsp; <img src="https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/CryptoUtilsPreview.gif" width="30%" />
 </div>
 
 ## 使用说明
 
 1. 原文
+
 ```ObjC
 #define PlainText @"Objective-C，通常写作ObjC或OC和较少用的Objective C或Obj-C，是扩充C的面向对象编程语言。它主要使用于Mac OS X和GNUstep这两个使用OpenStep标准的系统，而在NeXTSTEP和OpenStep中它更是基本语言。GCC与Clang含Objective-C的编译器，Objective-C可以在GCC以及Clang运作的系统上编译。Swift是苹果于2014年WWDC（苹果开发者大会）发布的一种新的编程语言，用于编写 iOS 和 macOS 应用。Swift 结合了 C 和 Objective-C 的优点并且不受C兼容性的限制。Swift 采用安全的编程模式并添加了很多新特性，这将使编程更简单，更灵活，也更有趣。Swift 是基于成熟而且倍受喜爱的 Cocoa 和 Cocoa Touch 框架，他的降临将重新定义软件开发。"
 ```
 
 2. Base64
+
 ```ObjC
 - (IBAction)testBase64:(id)sender {
     NSString *encodedText = [DYFCryptoUtils base64EncodedString:PlainText];
@@ -56,6 +61,7 @@
 ```
 
 3. MD5
+
 ```ObjC
 - (IBAction)testMD5:(id)sender {
     NSString *hash = [DYFCryptoUtils MD5EncodedString:PlainText];
@@ -67,6 +73,7 @@
 ```
 
 4. DES
+
 ```ObjC
 - (IBAction)testDES:(id)sender {
     NSString *key = @"aT59qMrbqJh3o7F566GpO6BhKgdrHDUsMfIPs27J5CmE6DXGkl9VFYam4gRI5MFVjFTi9oScQALesTaPuQ8hdAH9jEssJnItgYxE6Pl+D8sFTVZJvhMwNQR";
@@ -80,6 +87,7 @@
 ```
 
 5. AES
+
 ```ObjC
 - (IBAction)testAES:(id)sender {
     NSString *key = @"aT59qMrbqJh3o7F566GpO6BhKgdrHDUsMfIPs27J5CmE6DXGkl9VFYam4gRI5MFVjFTi9oScQALesTaPuQ8hdAH9jEssJnItgYxE6Pl+D8sFTVZJvhMwNQR";
@@ -121,3 +129,7 @@ static NSString *rsaPrivKey = @"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGB
     NSLog(@"[RSA] Signature verificaiton: %@", re ? @"Success" : @"Failure");
 }
 ```
+
+## Sample Codes
+
+- [Sample Codes Gateway](https://github.com/dgynfi/DYFCryptoUtils/blob/master/Basic%20Files/ViewController.m)
