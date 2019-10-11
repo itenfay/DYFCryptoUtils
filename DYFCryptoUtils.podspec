@@ -2,8 +2,8 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DYFCryptoUtils"
-  spec.version      = "1.0.1"
-  spec.summary      = "iOS crypto，includes Base64, MD5, DES, AES, RSA."
+  spec.version      = "1.0.2"
+  spec.summary      = "Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms."
 
   spec.homepage     = "https://github.com/dgynfi/DYFCryptoUtils"
   # spec.screenshots = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"

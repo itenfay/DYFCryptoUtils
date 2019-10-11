@@ -18,7 +18,7 @@
 
 ## DYFCryptoUtils
 
-&emsp; 一行代码实现 iOS Base64, 32/16位 MD5, DES, AES, RSA 算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code. The operation is simple and easy to use.)
+&emsp; 一行代码实现 iOS Base64, 32/16位 MD5, DES, AES, RSA 算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code, the operation is simple and easy to use.)
 
  ## 安装
 
