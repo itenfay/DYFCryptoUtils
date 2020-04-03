@@ -8,37 +8,35 @@
 [![CocoaPods](http://img.shields.io/cocoapods/v/DYFCryptoUtils.svg?style=flat)](http://cocoapods.org/pods/DYFCryptoUtils)&nbsp;
 ![CocoaPods](http://img.shields.io/cocoapods/p/DYFCryptoUtils.svg?style=flat)&nbsp;
 
-## 技术交流群(群号:155353383) 
-
-- 欢迎加入技术交流群，一起探讨技术问题。
+## Group (ID:614799921)
 
 <div align=left>
-&emsp; <img src="https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/qq155353383.jpg" width="20%" />
+&emsp; <img src="https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/g614799921.jpg" width="30%" />
 </div>
 
 ## DYFCryptoUtils
 
-&emsp; 一行代码实现 iOS Base64, 32/16位 MD5, DES, AES, RSA 算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code, the operation is simple and easy to use.)
+一行代码实现 iOS Base64, 32/16位 MD5, DES, AES, RSA 算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code, the operation is simple and easy to use.)
 
- ## 安装
+## Installation
 
-- 支持通过 CocoaPods 安装。
+Using [CocoaPods](https://cocoapods.org):
 
  ```pod install
  pod 'DYFCryptoUtils', '~> 1.0.2'
 ```
 
-## 预览
+## Preview
 
 <div align=left>
 &emsp; <img src="https://github.com/dgynfi/DYFCryptoUtils/raw/master/images/CryptoUtilsPreview.gif" width="30%" />
 </div>
 
-## 使用说明
+## Usage
 
 1. 原文
 
-```ObjC
+```
 #define PlainText @"Objective-C，通常写作ObjC或OC和较少用的Objective C或Obj-C，是扩充C的面向对象编程语言。它主要使用于Mac OS X和GNUstep这两个使用OpenStep标准的系统，而在NeXTSTEP和OpenStep中它更是基本语言。GCC与Clang含Objective-C的编译器，Objective-C可以在GCC以及Clang运作的系统上编译。Swift是苹果于2014年WWDC（苹果开发者大会）发布的一种新的编程语言，用于编写 iOS 和 macOS 应用。Swift 结合了 C 和 Objective-C 的优点并且不受C兼容性的限制。Swift 采用安全的编程模式并添加了很多新特性，这将使编程更简单，更灵活，也更有趣。Swift 是基于成熟而且倍受喜爱的 Cocoa 和 Cocoa Touch 框架，他的降临将重新定义软件开发。"
 ```
 
@@ -104,7 +102,7 @@
 
 - KeyPair: Public Key/Private Key.
 
-```ObjC
+```
 // RSA公钥
 static NSString *rsaPubKey = @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCmPW2SwJFldGVB1SM82VYvSZYRF1H5DREUiDK2SLnksxHAV/roC1uB44a4siUehJ9AKeV/g58pVrjhX3eSiBh9Khom/S2hEWF2n/6+lqqiwQi1W5rjl86v+dI2F6NgbPFpfesrRjWD9uskT2VX/ZJuMRLz8VPIyQOM9TW3PkMYBQIDAQAB";
 
@@ -130,6 +128,6 @@ static NSString *rsaPrivKey = @"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGB
 }
 ```
 
-## Sample Codes
+## Code Sample
 
-- [Sample Codes Gateway](https://github.com/dgynfi/DYFCryptoUtils/blob/master/Basic%20Files/ViewController.m)
+- [Code Sample Portal](https://github.com/dgynfi/DYFCryptoUtils/blob/master/Basic%20Files/ViewController.m)
