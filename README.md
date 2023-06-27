@@ -8,15 +8,15 @@
 [![CocoaPods](http://img.shields.io/cocoapods/v/DYFCryptoUtils.svg?style=flat)](http://cocoapods.org/pods/DYFCryptoUtils)&nbsp;
 ![CocoaPods](http://img.shields.io/cocoapods/p/DYFCryptoUtils.svg?style=flat)&nbsp;
 
+## DYFCryptoUtils
+
+一行代码实现 iOS Base64, 32/16位 MD5, DES, AES, RSA 算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code, the operation is simple and easy to use.)
+
 ## Group (ID:614799921)
 
 <div align=left>
 &emsp; <img src="https://github.com/chenxing640/DYFCryptoUtils/raw/master/images/g614799921.jpg" width="30%" />
 </div>
-
-## DYFCryptoUtils
-
-一行代码实现 iOS Base64, 32/16位 MD5, DES, AES, RSA 算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code, the operation is simple and easy to use.)
 
 ## Installation
 
