@@ -1,35 +1,41 @@
 <div align=center>
-<img src="https://github.com/chenxing640/DYFCryptoUtils/raw/master/images/CryptoUtils.jpg" width="60%">
+<img src="https://github.com/itenfay/DYFCryptoUtils/raw/master/images/CryptoUtils.jpg" width="50%">
 </div>
 
-[如果你觉得能帮助到你，请给一颗小星星。谢谢！(If you think it can help you, please give it a star. Thanks!)](https://github.com/chenxing640/DYFCryptoUtils)
+如果能帮助到你，请给[一颗星](https://github.com/itenfay/DYFCryptoUtils)，谢谢！(If you think this can help you, please give it a [star](https://github.com/itenfay/DYFCryptoUtils), Thanks!)
+
+## DYFCryptoUtils
+
+实现 iOS 的`Base64, 32/16位 MD5, DES, AES, RSA`算法，调用简单且好用。(Achieves `Base64, 32/16 bit MD5, DES, AES and RSA` algorithms for iOS, the invocation is simple and easy to use.)
 
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)&nbsp;
 [![CocoaPods](http://img.shields.io/cocoapods/v/DYFCryptoUtils.svg?style=flat)](http://cocoapods.org/pods/DYFCryptoUtils)&nbsp;
 ![CocoaPods](http://img.shields.io/cocoapods/p/DYFCryptoUtils.svg?style=flat)&nbsp;
 
-## DYFCryptoUtils
-
-一行代码实现 iOS Base64, 32/16位 MD5, DES, AES, RSA 算法，操作简单好用。(Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS with one line of code, the operation is simple and easy to use.)
-
 ## Group (ID:614799921)
 
 <div align=left>
-&emsp; <img src="https://github.com/chenxing640/DYFCryptoUtils/raw/master/images/g614799921.jpg" width="30%" />
+&emsp; <img src="https://github.com/itenfay/DYFCryptoUtils/raw/master/images/g614799921.jpg" width="30%" />
 </div>
 
 ## Installation
 
 Using [CocoaPods](https://cocoapods.org):
 
- ```pod install
- pod 'DYFCryptoUtils', '~> 1.0.2'
+```
+ pod 'DYFCryptoUtils'
+```
+
+Or
+
+```
+ pod 'DYFCryptoUtils', '~> 1.1.0'
 ```
 
 ## Preview
 
 <div align=left>
-&emsp; <img src="https://github.com/chenxing640/DYFCryptoUtils/raw/master/images/CryptoUtilsPreview.gif" width="30%" />
+&emsp; <img src="https://github.com/itenfay/DYFCryptoUtils/raw/master/images/CryptoUtilsPreview.gif" width="30%" />
 </div>
 
 ## Usage
@@ -128,6 +134,6 @@ static NSString *rsaPrivKey = @"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGB
 }
 ```
 
-## Code Sample
+## Sample
 
-- [Code Sample Portal](https://github.com/chenxing640/DYFCryptoUtils/blob/master/Basic%20Files/ViewController.m)
+- [Code Sample Portal](https://github.com/itenfay/DYFCryptoUtils/blob/master/Basic%20Files/ViewController.m)

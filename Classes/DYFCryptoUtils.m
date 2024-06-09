@@ -1,8 +1,8 @@
 //
 //  DYFCryptoUtils.m
 //
-//  Created by dyf on 2017/10/10.
-//  Copyright © 2017 dyf. All rights reserved.
+//  Created by Tenfay on 2017/10/10.
+//  Copyright © 2017 Tenfay. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,14 +27,15 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 
+// -------------------------------------------------------
 // Warning: Note the following functions hooked by hackers or senior reverse engineers.
-//
+// -------------------------------------------------------
 // DES/AES ==> CCCrypt
 //   RSA   ==> SecKeyEncrypt
 //   RSA   ==> SecKeyDecrypt
 //   RSA   ==> SecKeyRawSign
 //   RSA   ==> SecKeyRawVerify
-//
+// -------------------------------------------------------
 
 @implementation DYFCryptoUtils
 

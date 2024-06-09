@@ -1,8 +1,8 @@
 //
 //  ViewController.m
 //
-//  Created by dyf on 2019/5/6.
-//  Copyright © 2019 dyf. All rights reserved.
+//  Created by Tenfay on 2019/5/6.
+//  Copyright © 2019 Tenfay. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -24,7 +24,6 @@ static NSString *rsaPrivKey = @"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGB
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (IBAction)testBase64:(id)sender {
