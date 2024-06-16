@@ -29,7 +29,7 @@ Using [CocoaPods](https://cocoapods.org):
 Or
 
 ```
- pod 'DYFCryptoUtils', '~> 1.1.0'
+ pod 'DYFCryptoUtils', '~> 1.1.1'
 ```
 
 ## Preview

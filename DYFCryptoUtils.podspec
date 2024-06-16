@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "DYFCryptoUtils"
-  spec.version      = "1.1.0"
+  spec.version      = "1.1.1"
   spec.summary      = "Achieves Base64, 32/16 bit MD5, DES, AES and RSA algorithms for iOS."
 
   spec.homepage     = "https://github.com/itenfay/DYFCryptoUtils"
@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
 
   spec.license      = { :type => "MIT", :file => "LICENSE" }
 
-  spec.author       = { "Tenfay" => "hansen981@126.com" }
+  spec.author       = { "Tenfay" => "itenfay@163.com" }
 
   spec.platform     = :ios
   # spec.platform   = :ios, "5.0"
